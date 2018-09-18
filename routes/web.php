@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/usuarios/nuevo', function () {
+    return view('nuevoUsuario');
+});
+
+Route::get('/usuarios/eliminar', function () {
+    return view('eliminarUsuario');
+});
+
+Route::get('/usuarios/modificar', function () {
+    return view('modificarUsuario');
+});
