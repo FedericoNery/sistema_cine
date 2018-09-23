@@ -13,13 +13,20 @@
 <body>
 	<h1>NUEVO USUARIO</h1>
 
+	<form method="POST" action="{{ url('/usuarios/crear')  }}">
+
+	{{csrf_field()}}
+
 	Nombre: <input type="text" name="nombre"><br>
   	Apellido: <input type="text" name="apellido"><br>
-  	Fecha de Nacimiento: <br>
-  	Email: <input type="text" name="email"><br>
-  	Contraseña: <input type="text" name="email"><br>
+  	Email: <input type="email" name="email"><br>
+  	Telefono: <input type="text" name="telefono"><br>
+  	Fecha de Nacimiento: <input id="date" type="date" name="fecha_de_nacimiento"> <br>
+  	Contraseña: <input type="text" name="contrasenia"><br>
   	
-	<button type="button" class="btn btn-primary">Enviar</button>
-	
+	<button type="submit" class="btn btn-primary">Enviar</button>
+
+	</form>
+
 </body>
 </html>

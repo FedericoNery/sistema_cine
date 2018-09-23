@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/usuarios/nuevo', function () {
-    return view('nuevoUsuario');
-});
+Route::get('/usuarios/nuevo', 'ControladorDelUsuario@devolverFormularioNuevoUsuario');
 
 Route::get('/usuarios/eliminar', function () {
     return view('eliminarUsuario');
@@ -27,3 +25,7 @@ Route::get('/usuarios/eliminar', function () {
 Route::get('/usuarios/modificar', function () {
     return view('modificarUsuario');
 });
+
+
+Route::post('usuarios/crear','ControladorDelUsuario@guardarNuevoUsuario');
+
